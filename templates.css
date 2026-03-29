@@ -136,7 +136,15 @@ body {
         font-size: 1rem;
     }
     .templates-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
     }
+    .resume-wrapper.preview-mode {
+        transform: scale(0.18) !important;
+    }
+    .template-card {
+        padding: 1.5rem 1rem;
+    }
+    .template-card h3 { font-size: 1rem; }
 }
