@@ -22,15 +22,28 @@ body {
 #username-display { color: #fff; font-weight: 700; }
 
 .content { padding: 0 4rem 4rem; max-width: 1400px; margin: 0 auto; }
-.intro { text-align: center; margin-bottom: 4rem; }
-.intro h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
-.intro h1 .highlight { color: var(--yellow); font-family: 'Syncopate', sans-serif; }
-.intro p { color: var(--text-sec); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.intro h1 { 
+    font-family: 'Inter', sans-serif; 
+    font-size: 2.2rem; 
+    font-weight: 700; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: -0.5px;
+}
+.intro h1 .highlight { 
+    display: block;
+    color: var(--yellow); 
+    font-family: 'Syncopate', sans-serif; 
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+.intro p { color: var(--text-sec); font-size: 0.95rem; max-width: 500px; margin: 0 auto; opacity: 0.8; }
 
 .templates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
 .template-card {
@@ -137,9 +150,11 @@ body {
     }
     .templates-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 1rem;
+        gap: 0.8rem;
+        padding: 0.5rem;
     }
+    .intro h1 { font-size: 1.8rem; }
+    .intro h1 .highlight { font-size: 2.2rem; }
     .resume-wrapper.preview-mode {
         transform: scale(0.18) !important;
     }
