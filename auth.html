@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="auth.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Lines Background -->
+    <div style="width: 100vw; height: 100vh; position: fixed; z-index: -2; left: 0; top: 0; pointer-events: none;" id="floating-lines-container"></div>
+    <div style="position: fixed; inset: 0; z-index: -1; pointer-events: auto; opacity: 0;" id="floating-lines-interaction"></div>
+    
+    <!-- NextGen Logo -->
+    <div class="logo-container" style="position: absolute; top: 30px; left: 40px; z-index: 10;">
+        <h1 style="color: #fff; font-weight: 800; font-size: 32px; letter-spacing: 1px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">NEXT<span style="color: #ffcc00;">GEN</span></h1>
+    </div>
+
+    <div class="wrapper">
+        <div class="card-3d-wrap">
+            <div class="card-3d-wrapper" id="card-wrapper">
+                <!-- Sign Up Page (Front) -->
+                <div class="card-front">
+                    <div class="center-wrap">
+                        <div class="section text-center">
+                            <h4 class="mb-4 pb-3">Sign Up</h4>
+                            <form id="signup-form">
+                                <div class="form-group">
+                                    <input type="text" id="signup-username" class="form-style" placeholder="Choose Username" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                                </div>    
+                                <div class="form-group mt-2">
+                                    <input type="password" id="signup-password" class="form-style" placeholder="Password" autocomplete="off" required>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <input type="password" id="signup-confirm-password" class="form-style" placeholder="Confirm Password" autocomplete="off" required>
+                                </div>
+                                <button type="submit" class="btn mt-4">Register</button>
+                                <p class="mb-0 mt-4 text-center"><a href="#" class="link" id="show-login">Already have an account? Log In</a></p>
+                                <div id="signup-message" class="message"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Login Page (Back) -->
+                <div class="card-back">
+                    <div class="center-wrap">
+                        <div class="section text-center">
+                            <h4 class="mb-4 pb-3">Log In</h4>
+                            <form id="login-form">
+                                <div class="form-group">
+                                    <input type="text" id="login-username" class="form-style" placeholder="Username" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+                                </div>    
+                                <div class="form-group mt-2">
+                                    <input type="password" id="login-password" class="form-style" placeholder="Password" autocomplete="off" required>
+                                </div>
+                                <button type="submit" class="btn mt-4">Login</button>
+                                <p class="mb-0 mt-4 text-center"><a href="#" class="link" id="show-signup">Don't have an account? Sign Up</a></p>
+                                <div id="login-message" class="message"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FloatingLines Animation Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="floating-lines.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById('floating-lines-container');
+            const interactionLayer = document.getElementById('floating-lines-interaction');
+            
+            if (container && window.FloatingLines) {
+                const floatingLines = new window.FloatingLines(container, {
+                    linesGradient: ["#FFFFFF", "#F3F4F6", "#FFFFFF"],
+                    animationSpeed: 1,
+                    interactive: true,
+                    bendRadius: 5,
+                    bendStrength: -0.5,
+                    mouseDamping: 0.05,
+                    parallax: true,
+                    parallaxStrength: 0.2
+                });
+
+                if (interactionLayer) {
+                    interactionLayer.addEventListener('pointermove', (e) => floatingLines.handlePointerMove(e));
+                    interactionLayer.addEventListener('pointerleave', (e) => floatingLines.handlePointerLeave());
+                }
+            }
+        });
+    </script>
+
+    <!-- Firebase SDKs & App Logic -->
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

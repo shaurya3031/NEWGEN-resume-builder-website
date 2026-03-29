@@ -1,0 +1,142 @@
+/* templates.css - base layout */
+:root {
+  --bg-color: #080808;
+  --text-primary: #ffffff;
+  --text-sec: #888888;
+  --yellow: #ffcc00;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0; min-height: 100vh;
+}
+.header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 2rem 4rem;
+}
+.logo { font-family: 'Syncopate', sans-serif; font-size: 1.5rem; letter-spacing: 2px; }
+.yellow-text { color: var(--yellow); }
+.user-info { color: var(--text-sec); font-weight: 500; font-size: 0.9rem; }
+#username-display { color: #fff; font-weight: 700; }
+
+.content { padding: 0 4rem 4rem; max-width: 1400px; margin: 0 auto; }
+.intro { text-align: center; margin-bottom: 4rem; }
+.intro h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+.intro h1 .highlight { color: var(--yellow); font-family: 'Syncopate', sans-serif; }
+.intro p { color: var(--text-sec); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.template-card {
+    background: #111111;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid #222;
+    display: flex; flex-direction: column;
+}
+
+.template-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    border-color: #444;
+}
+
+/* Base structural styles for all realistic previews */
+.pv-window {
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+    display: flex; align-items: start; justify-content: center;
+    padding-top: 20px;
+}
+
+.resume-wrapper.preview-mode {
+    width: 21cm;
+    min-height: 29.7cm;
+    transform: scale(0.24);
+    transform-origin: top center;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* Placeholders for the preview to show content structure without real text */
+.prev-name-placeholder { width: 60%; height: 24px; background: currentColor; opacity: 0.8; margin-bottom: 10px; border-radius: 4px; }
+.prev-title-placeholder { width: 40%; height: 14px; background: currentColor; opacity: 0.5; margin-bottom: 15px; border-radius: 2px; }
+.preview-mode .resume-contact span { display: inline-block; width: 60px; height: 8px; background: currentColor; opacity: 0.3; border-radius: 2px; }
+
+.preview-mode .section-title { font-size: 1.1rem !important; }
+.preview-mode .item-title strong { display: inline-block; width: 100px; height: 10px; background: currentColor; opacity: 0.6; }
+.preview-mode .item-title span { display: inline-block; width: 80px; height: 8px; background: currentColor; opacity: 0.4; margin-left: 10px; }
+.preview-mode .item-date { width: 50px; height: 8px; background: currentColor; opacity: 0.3; }
+.preview-mode .item-desc li { height: 6px; background: currentColor; opacity: 0.2; margin-bottom: 8px; border-radius: 2px; }
+.preview-mode .item-desc li::before { display: none; }
+.preview-mode .skill-tag { width: 40px; height: 14px; background: currentColor !important; opacity: 0.2; }
+
+.pv-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s ease;
+}
+
+.template-card:hover .pv-overlay { opacity: 1; }
+
+.btn-select {
+    padding: 12px 28px; background: #fff; color: #000; border: none; border-radius: 12px;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer;
+    transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background 0.3s;
+    font-size: 0.9rem;
+}
+.btn-select:hover { background: var(--yellow); }
+.template-card:hover .btn-select { transform: translateY(0); }
+
+.card-info { padding: 1.5rem; text-align: center; }
+.card-info h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff; letter-spacing: 0.5px; }
+.card-info p { font-size: 0.85rem; color: var(--text-sec); line-height: 1.5; margin: 0; }
+
+/* ==============================================================
+   16 EXCEPTIONAL UNIQUE PREVIEW THEMES 
+   ============================================================== */
+
+/* 
+   THEME OVERRIDES FOR PREVIEW MODE
+   ---------------------------------
+   Individual template colors and layouts are now handled by resume-templates.css 
+   targeting .resume-wrapper.tpl-xxx.
+   The .preview-mode class ensures they look correct in the small windows.
+*/
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .content {
+        padding: 0 1.5rem 3rem;
+    }
+    .intro h1 {
+        font-size: 2.2rem;
+    }
+    .intro p {
+        font-size: 1rem;
+    }
+    .templates-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

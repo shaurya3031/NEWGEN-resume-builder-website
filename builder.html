@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Resume Builder</title>
+    <meta name="description" content="Create job-ready resumes with advanced templates and live preview.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resume-templates.css">
+</head>
+<body>
+    <header class="app-header hide-on-print">
+        <div class="logo">
+            <span class="logo-accent">Next</span>Gen Resume
+        </div>
+        <div class="controls">
+            <button id="btnExport" class="btn btn-primary">Export PDF</button>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <!-- FORM SECTION -->
+        <aside class="form-panel hide-on-print">
+            <div class="form-container">
+                <section class="form-section">
+                    <h2>Personal Information</h2>
+                    <div class="input-group">
+                        <label for="inp-name">Full Name</label>
+                        <input type="text" id="inp-name" placeholder="E.g. John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label for="inp-title">Professional Title</label>
+                        <input type="text" id="inp-title" placeholder="E.g. Software Engineer">
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="inp-email">Email</label>
+                            <input type="email" id="inp-email" placeholder="john@example.com">
+                        </div>
+                        <div class="input-group">
+                            <label for="inp-phone">Phone</label>
+                            <input type="tel" id="inp-phone" placeholder="(123) 456-7890">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="inp-location">Location</label>
+                            <input type="text" id="inp-location" placeholder="City, State">
+                        </div>
+                        <div class="input-group">
+                            <label for="inp-website">Website / LinkedIn</label>
+                            <input type="text" id="inp-website" placeholder="linkedin.com/in/johndoe">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Professional Summary</h2>
+                    <div class="input-group">
+                        <textarea id="inp-summary" rows="4" placeholder="Briefly describe your career highlights and goals..."></textarea>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2>Experience</h2>
+                        <button class="btn btn-small" id="btnAddExp">+ Add</button>
+                    </div>
+                    <div id="experienceList">
+                        <!-- Dynamic Experience Forms -->
+                        <div class="item-form" data-id="exp-1">
+                            <div class="input-group">
+                                <label>Job Title</label>
+                                <input type="text" class="dyn-inp" data-target="prev-exp-title-1" placeholder="Senior Developer">
+                            </div>
+                            <div class="input-group">
+                                <label>Company</label>
+                                <input type="text" class="dyn-inp" data-target="prev-exp-company-1" placeholder="Tech Corp">
+                            </div>
+                            <div class="row">
+                                <div class="input-group">
+                                    <label>Start Date</label>
+                                    <input type="text" class="dyn-inp" data-target="prev-exp-start-1" placeholder="Jan 2020">
+                                </div>
+                                <div class="input-group">
+                                    <label>End Date</label>
+                                    <input type="text" class="dyn-inp" data-target="prev-exp-end-1" placeholder="Present">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Description (bullet points separated by new line)</label>
+                                <textarea class="dyn-inp" data-target="prev-exp-desc-1" rows="3">- Developed web apps...&#10;- Led a team of...</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <div class="section-header">
+                        <h2>Education</h2>
+                        <button class="btn btn-small" id="btnAddEdu">+ Add</button>
+                    </div>
+                    <div id="educationList">
+                        <!-- Dynamic Education Forms -->
+                        <div class="item-form" data-id="edu-1">
+                            <div class="input-group">
+                                <label>Degree</label>
+                                <input type="text" class="dyn-inp" data-target="prev-edu-degree-1" placeholder="B.S. Computer Science">
+                            </div>
+                            <div class="input-group">
+                                <label>University / School</label>
+                                <input type="text" class="dyn-inp" data-target="prev-edu-school-1" placeholder="University of Technology">
+                            </div>
+                            <div class="row">
+                                <div class="input-group">
+                                    <label>Start Date</label>
+                                    <input type="text" class="dyn-inp" data-target="prev-edu-start-1" placeholder="2016">
+                                </div>
+                                <div class="input-group">
+                                    <label>End Date</label>
+                                    <input type="text" class="dyn-inp" data-target="prev-edu-end-1" placeholder="2020">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Skills</h2>
+                    <div class="input-group">
+                        <label for="inp-skills">Comma Separated Skills</label>
+                        <input type="text" id="inp-skills" placeholder="JavaScript, React, CSS, Node.js">
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <!-- PREVIEW SECTION -->
+        <section class="preview-panel">
+            <div id="resumePreview" class="resume-wrapper tpl-modern-minimal">
+                <!-- Header -->
+                <div class="resume-header">
+                    <h1 id="prev-name">John Doe</h1>
+                    <h2 id="prev-title">Software Engineer</h2>
+                    <div class="resume-contact">
+                        <span id="prev-email">john@example.com</span>
+                        <span class="separator">•</span>
+                        <span id="prev-phone">(123) 456-7890</span>
+                        <span class="separator">•</span>
+                        <span id="prev-location">City, State</span>
+                        <span class="separator">•</span>
+                        <span id="prev-website">linkedin.com/in/johndoe</span>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="resume-section">
+                    <h3 class="section-title">Professional Summary</h3>
+                    <p id="prev-summary">Briefly describe your career highlights and goals...</p>
+                </div>
+
+                <!-- Experience -->
+                <div class="resume-section">
+                    <h3 class="section-title">Work Experience</h3>
+                    <div id="prev-experience-list">
+                        <div class="resume-item" id="prev-exp-1">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <strong id="prev-exp-title-1">Senior Developer</strong>
+                                    <span class="item-company" id="prev-exp-company-1">Tech Corp</span>
+                                </div>
+                                <div class="item-date">
+                                    <span id="prev-exp-start-1">Jan 2020</span> - <span id="prev-exp-end-1">Present</span>
+                                </div>
+                            </div>
+                            <ul class="item-desc" id="prev-exp-desc-1">
+                                <li>Developed web apps...</li>
+                                <li>Led a team of...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="resume-section">
+                    <h3 class="section-title">Education</h3>
+                    <div id="prev-education-list">
+                        <div class="resume-item" id="prev-edu-1">
+                            <div class="item-header">
+                                <div class="item-title">
+                                    <strong id="prev-edu-degree-1">B.S. Computer Science</strong>
+                                    <span class="item-company" id="prev-edu-school-1">University of Technology</span>
+                                </div>
+                                <div class="item-date">
+                                    <span id="prev-edu-start-1">2016</span> - <span id="prev-edu-end-1">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="resume-section">
+                    <h3 class="section-title">Skills</h3>
+                    <div class="skills-list" id="prev-skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

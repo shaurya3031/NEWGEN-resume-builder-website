@@ -1,0 +1,220 @@
+/* ==============================================================
+   PREMIUM RESUME TEMPLATES - NEXTGEN v2.0
+   ============================================================== */
+
+/* 1. Modern Minimal - Clean, Professional, Balanced */
+.resume-wrapper.tpl-modern-minimal { 
+    background: #fff; color: #2d3436; font-family: 'Inter', sans-serif; padding: 50px; 
+}
+.resume-wrapper.tpl-modern-minimal .resume-header { 
+    border-bottom: 2px solid #f1f2f6; text-align: left; margin-bottom: 30px; padding-bottom: 20px;
+}
+.resume-wrapper.tpl-modern-minimal h1 { color: #2d3436; font-weight: 800; font-size: 2.8rem; letter-spacing: -1px; margin: 0; }
+.resume-wrapper.tpl-modern-minimal h2 { color: #0984e3; font-weight: 500; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 2px; margin: 5px 0 0 0; }
+.resume-wrapper.tpl-modern-minimal .section-title { 
+    color: #2d3436; border-left: 4px solid #0984e3; padding-left: 15px; background: #f9fbfd; font-size: 1.1rem; padding-top: 5px; padding-bottom: 5px;
+}
+.resume-wrapper.tpl-modern-minimal .skill-tag { background: #f1f2f6; color: #2d3436; border-radius: 4px; border: 1px solid #dfe6e9; }
+
+/* 2. Dark Glassmorphism - Premium Tech Aesthetic */
+.resume-wrapper.tpl-dark-glass { 
+    background: #0f172a; color: #cbd5e1; font-family: 'Inter', sans-serif; position: relative; padding: 50px;
+    background-image: radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.1), transparent), radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.1), transparent);
+}
+.resume-wrapper.tpl-dark-glass .resume-header { 
+    background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px; padding: 30px; margin-bottom: 40px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.resume-wrapper.tpl-dark-glass h1 { color: #f8fafc; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); margin: 0; }
+.resume-wrapper.tpl-dark-glass h2 { color: #38bdf8; margin: 5px 0 0 0; }
+.resume-wrapper.tpl-dark-glass .section-title { border-bottom: 1px solid rgba(255,255,255,0.1); color: #f8fafc; position: relative; padding-bottom: 10px; }
+.resume-wrapper.tpl-dark-glass .section-title::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 50px; height: 2px; background: #38bdf8; }
+.resume-wrapper.tpl-dark-glass .skill-tag { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); color: #38bdf8; }
+
+/* 3. Cyberpunk Neon - High Velocity Tech */
+.resume-wrapper.tpl-cyberpunk { 
+    background: #000; color: #0ff; font-family: 'Syncopate', monospace; border: 2px solid #0ff; padding: 50px;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,255,0.03) 2px, rgba(0,255,255,0.03) 4px);
+}
+.resume-wrapper.tpl-cyberpunk .resume-header { border-bottom: 4px double #f0f; padding: 20px; position: relative; margin-bottom: 30px; }
+.resume-wrapper.tpl-cyberpunk h1 { color: #f0f; text-shadow: 3px 3px 0 #0ff; font-size: 2.2rem; margin: 0; }
+.resume-wrapper.tpl-cyberpunk h2 { border: 1px solid #f0f; padding: 5px 10px; display: inline-block; margin-top: 10px; color: #0ff; }
+.resume-wrapper.tpl-cyberpunk .section-title { background: #f0f; color: #000; padding: 5px 15px; clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); margin-bottom: 20px; }
+.resume-wrapper.tpl-cyberpunk .skill-tag { border: 1px solid #0ff; border-radius: 0; background: transparent; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); padding-left: 20px; color: #0ff; }
+
+/* 4. Neon Nights - Synthwave Vibes */
+.resume-wrapper.tpl-neon-nights { 
+    background: #1a0b2e; color: #fff; font-family: 'Poppins', sans-serif; padding: 50px;
+    background-image: linear-gradient(135deg, #1a0b2e 0%, #3d1a5a 100%);
+}
+.resume-wrapper.tpl-neon-nights .resume-header { 
+    text-align: center; border-radius: 30px; background: linear-gradient(to right, #ff007f, #7000ff); padding: 40px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(255, 0, 127, 0.3);
+}
+.resume-wrapper.tpl-neon-nights h1 { font-family: 'Syncopate', sans-serif; font-size: 2.5rem; letter-spacing: 2px; margin: 0; color: #fff; }
+.resume-wrapper.tpl-neon-nights h2 { color: rgba(255,255,255,0.8); margin-top: 5px; }
+.resume-wrapper.tpl-neon-nights .section-title { color: #00e5ff; text-transform: uppercase; border-bottom: 2px solid #ff007f; display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+.resume-wrapper.tpl-neon-nights .skill-tag { background: rgba(0, 229, 255, 0.1); border: 1px solid #00e5ff; color: #00e5ff; }
+
+/* 5. Creative Split - Dynamic Layout */
+.resume-wrapper.tpl-creative-split { 
+    background: #fff; color: #333; display: flex; flex-direction: column; padding: 0;
+}
+.resume-wrapper.tpl-creative-split .resume-header { 
+    background: #ff471a; color: #fff; padding: 60px 40px; margin-bottom: 30px; clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+.resume-wrapper.tpl-creative-split .resume-header h1 { color: #fff; font-size: 3rem; margin: 0; }
+.resume-wrapper.tpl-creative-split .resume-header h2 { color: rgba(255,255,255,0.9); margin-top: 5px; }
+.resume-wrapper.tpl-creative-split .resume-section { padding: 0 40px; margin-bottom: 30px; }
+.resume-wrapper.tpl-creative-split .section-title { color: #ff471a; font-size: 1.5rem; border: none; padding-bottom: 5px; margin-bottom: 15px; }
+.resume-wrapper.tpl-creative-split .skill-tag { background: #333; color: #fff; border-radius: 30px; }
+
+/* 6. Executive Suite - Traditional & Authority */
+.resume-wrapper.tpl-executive { 
+    background: #fdfdfd; color: #1a2a44; font-family: 'Playfair Display', serif; padding: 60px;
+}
+.resume-wrapper.tpl-executive .resume-header { 
+    border-bottom: 3px double #1a2a44; text-align: center; padding-bottom: 30px; margin-bottom: 30px;
+}
+.resume-wrapper.tpl-executive h1 { text-transform: uppercase; letter-spacing: 4px; font-weight: 700; margin: 0; color: #1a2a44; }
+.resume-wrapper.tpl-executive h2 { font-family: 'Inter', sans-serif; font-style: italic; color: #555; margin-top: 10px; }
+.resume-wrapper.tpl-executive .section-title { 
+    border-bottom: 1px solid #1a2a44; text-align: center; font-weight: 700; margin-top: 20px; letter-spacing: 2px; padding-bottom: 8px; margin-bottom: 20px;
+}
+.resume-wrapper.tpl-executive .skill-tag { border: 1px solid #1a2a44; font-family: 'Inter', sans-serif; color: #1a2a44; text-transform: uppercase; font-size: 0.8rem; }
+
+/* 7. Brutal Monochrome - Stark & Bold */
+.resume-wrapper.tpl-monochrome { 
+    background: #fff; color: #000; font-family: 'Syncopate', sans-serif; border: 10px solid #000; padding: 40px;
+}
+.resume-wrapper.tpl-monochrome .resume-header { 
+    background: #000; color: #fff; padding: 30px; margin: -40px -40px 40px -40px;
+}
+.resume-wrapper.tpl-monochrome h1 { font-size: 3.5rem; line-height: 0.9; margin: 0; color: #fff; }
+.resume-wrapper.tpl-monochrome h2 { color: #ccc; margin-top: 10px; }
+.resume-wrapper.tpl-monochrome .section-title { 
+    background: #eee; border: 4px solid #000; padding: 10px; display: block; box-shadow: 6px 6px 0 #000; margin-bottom: 25px;
+}
+.resume-wrapper.tpl-monochrome .skill-tag { border: 3px solid #000; border-radius: 0; font-weight: bold; background: #fff; box-shadow: 4px 4px 0 #000; color: #000; }
+
+/* 8. Soft Pastel - Approachable & Friendly */
+.resume-wrapper.tpl-soft-pastel { 
+    background: #fff; color: #5d6d7e; font-family: 'Poppins', sans-serif; border-radius: 40px; border: 15px solid #fdf2f4; padding: 40px;
+}
+.resume-wrapper.tpl-soft-pastel .resume-header { 
+    background: #fdf2f4; border-radius: 25px; padding: 40px; text-align: center; margin-bottom: 30px;
+}
+.resume-wrapper.tpl-soft-pastel h1 { color: #ec7063; font-weight: 700; margin: 0; }
+.resume-wrapper.tpl-soft-pastel h2 { color: #5dade2; margin-top: 5px; }
+.resume-wrapper.tpl-soft-pastel .section-title { 
+    background: #ebf5fb; color: #5dade2; padding: 10px 20px; border-radius: 20px; border: none; display: inline-block; margin-bottom: 20px;
+}
+.resume-wrapper.tpl-soft-pastel .skill-tag { background: #f4ecf7; color: #af7ac5; border-radius: 12px; }
+
+/* 9. Retro Terminal - Vintage Hacker */
+.resume-wrapper.tpl-retro-terminal { 
+    background: #000; color: #0f0; font-family: 'Courier New', Courier, monospace; border: 1px solid #0f0; padding: 50px; position: relative;
+}
+.resume-wrapper.tpl-retro-terminal::after { 
+    content: " "; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); z-index: 2; background-size: 100% 2px, 3px 100%; pointer-events: none;
+}
+.resume-wrapper.tpl-retro-terminal h1 { text-transform: uppercase; background: #0f0; color: #000; padding: 10px; display: inline-block; margin: 0; font-size: 2rem; }
+.resume-wrapper.tpl-retro-terminal h2 { display: block; margin-top: 10px; color: #0f0; }
+.resume-wrapper.tpl-retro-terminal .resume-header { border-bottom: 1px dashed #0f0; padding-bottom: 20px; margin-bottom: 30px; }
+.resume-wrapper.tpl-retro-terminal .section-title { border: 1px dashed #0f0; padding: 5px; display: inline-block; margin-bottom: 15px; }
+.resume-wrapper.tpl-retro-terminal .skill-tag { border: 1px solid #0f0; border-radius: 0; color: #0f0; }
+
+/* 10. Holographic - Iridescent Design */
+.resume-wrapper.tpl-holographic { 
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); color: #444; position: relative; padding: 50px;
+}
+.resume-wrapper.tpl-holographic .resume-header { 
+    background: linear-gradient(45deg, rgba(255,182,193,0.3), rgba(173,216,230,0.3), rgba(221,160,221,0.3)); border-radius: 20px; padding: 40px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.5); text-align: center;
+}
+.resume-wrapper.tpl-holographic h1 { 
+    background: -webkit-linear-gradient(45deg, #ee0979, #ff6a00); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 3rem; margin: 0;
+}
+.resume-wrapper.tpl-holographic .section-title { color: #ee0979; border-bottom: 2px solid #ff6a00; display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+.resume-wrapper.tpl-holographic .skill-tag { background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); color: #444; }
+
+/* 11. Material Design - Pure Android */
+.resume-wrapper.tpl-material-design { 
+    background: #fafafa; color: #212121; font-family: 'Roboto', sans-serif; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); padding: 0;
+}
+.resume-wrapper.tpl-material-design .resume-header { 
+    background: #6200ee; color: #fff; padding: 50px 40px; border-radius: 4px 4px 0 0; position: relative; margin-bottom: 30px;
+}
+.resume-wrapper.tpl-material-design h1 { color: #fff; font-size: 2.2rem; margin: 0; font-weight: 400; }
+.resume-wrapper.tpl-material-design h2 { color: rgba(255,255,255,0.8); font-weight: 300; margin-top: 5px; }
+.resume-wrapper.tpl-material-design .resume-section { padding: 0 40px; margin-bottom: 30px; }
+.resume-wrapper.tpl-material-design .section-title { color: #6200ee; font-weight: 500; border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 20px; }
+.resume-wrapper.tpl-material-design .skill-tag { background: #03dac6; color: #000; border-radius: 16px; font-weight: 500; }
+
+/* 12. Vintage Paper - Historic Feel */
+.resume-wrapper.tpl-vintage-paper { 
+    background: #f4e4bc; color: #4e342e; font-family: 'Playfair Display', serif; padding: 60px;
+    background-image: radial-gradient(#dcb 1px, transparent 0); background-size: 10px 10px;
+}
+.resume-wrapper.tpl-vintage-paper .resume-header { 
+    border-bottom: 2px solid #8d6e63; text-align: center; border-top: 2px solid #8d6e63; padding: 20px 0; margin-bottom: 40px;
+}
+.resume-wrapper.tpl-vintage-paper h1 { font-size: 3rem; text-transform: capitalize; margin: 0; }
+.resume-wrapper.tpl-vintage-paper h2 { font-style: italic; margin-top: 5px; }
+.resume-wrapper.tpl-vintage-paper .section-title { border-bottom: 1px dashed #8d6e63; color: #5d4037; font-style: italic; padding-bottom: 5px; margin-bottom: 20px; }
+.resume-wrapper.tpl-vintage-paper .skill-tag { border: 1px solid #8d6e63; border-radius: 0; background: rgba(141, 110, 99, 0.05); color: #4e342e; }
+
+/* 13. Gradient Mesh - Organic & Fluid */
+.resume-wrapper.tpl-gradient-mesh { 
+    background: #fff; color: #333; position: relative; z-index: 1; overflow: hidden; padding: 50px;
+}
+.resume-wrapper.tpl-gradient-mesh::before { 
+    content: ''; position: absolute; inset: -50%; background: radial-gradient(circle at 30% 30%, #ff8a00, transparent 50%), radial-gradient(circle at 70% 70%, #da1b60, transparent 50%), radial-gradient(circle at 50% 10%, #4facfe, transparent 50%); filter: blur(100px); opacity: 0.15; z-index: -1; animation: meshRotate 20s linear infinite;
+}
+@keyframes meshRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.resume-wrapper.tpl-gradient-mesh h1 { font-family: 'Poppins', sans-serif; font-weight: 800; color: #333; margin: 0; font-size: 2.5rem; }
+.resume-wrapper.tpl-gradient-mesh h2 { color: #666; margin-top: 5px; }
+.resume-wrapper.tpl-gradient-mesh .section-title { border-bottom: 2px solid #da1b60; color: #da1b60; padding-bottom: 5px; margin-bottom: 20px; }
+.resume-wrapper.tpl-gradient-mesh .skill-tag { background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); color: #333; }
+
+/* 14. Tech Blueprint - Scientific Precision */
+.resume-wrapper.tpl-tech-blueprint { 
+    background: #003366; color: #99ccff; font-family: 'Inter', sans-serif; padding: 50px;
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 25px 25px;
+}
+.resume-wrapper.tpl-tech-blueprint .resume-header { border: 1px solid #99ccff; padding: 25px; margin-bottom: 40px; text-align: left; }
+.resume-wrapper.tpl-tech-blueprint h1 { text-transform: uppercase; font-weight: 300; letter-spacing: 5px; margin: 0; color: #99ccff; }
+.resume-wrapper.tpl-tech-blueprint h2 { color: #fff; margin-top: 10px; opacity: 0.8; }
+.resume-wrapper.tpl-tech-blueprint .section-title { background: #99ccff; color: #003366; padding: 5px 10px; font-weight: 800; font-size: 0.9rem; margin-bottom: 20px; }
+.resume-wrapper.tpl-tech-blueprint .skill-tag { border: 1px dashed #99ccff; border-radius: 0; color: #99ccff; }
+
+/* 15. Startup Bold - Disruptive & Energetic */
+.resume-wrapper.tpl-startup-bold { 
+    background: #fff; color: #111; font-family: 'Inter', sans-serif; border-left: 20px solid #651fff; padding: 50px;
+}
+.resume-wrapper.tpl-startup-bold .resume-header { padding-left: 20px; margin-bottom: 40px; }
+.resume-wrapper.tpl-startup-bold h1 { font-weight: 900; font-size: 4rem; text-transform: uppercase; line-height: 0.8; color: #651fff; margin: 0; }
+.resume-wrapper.tpl-startup-bold h2 { color: #111; font-weight: 800; margin-top: 15px; background: #c6ff00; display: inline-block; padding: 0 10px; }
+.resume-wrapper.tpl-startup-bold .section-title { background: #c6ff00; color: #000; padding: 5px 20px; transform: rotate(-1deg); display: inline-block; border: none; font-weight: 900; margin-bottom: 20px; }
+.resume-wrapper.tpl-startup-bold .skill-tag { background: #111; color: #fff; border-radius: 0; transform: skewX(-10deg); }
+
+/* 16. Elegant Serif - High Luxury */
+.resume-wrapper.tpl-elegant-serif { 
+    background: #fdfaf5; color: #4a2525; font-family: 'Playfair Display', serif; padding: 60px; border: 1px solid #d4af37; outline: 10px solid #fdfaf5; outline-offset: -20px;
+}
+.resume-wrapper.tpl-elegant-serif .resume-header { text-align: center; border-bottom: 1px solid #d4af37; padding-bottom: 30px; margin-bottom: 40px; }
+.resume-wrapper.tpl-elegant-serif h1 { font-weight: 400; font-size: 3.5rem; letter-spacing: 2px; margin: 0; color: #4a2525; }
+.resume-wrapper.tpl-elegant-serif h2 { font-family: 'Playfair Display', serif; font-style: italic; color: #d4af37; margin-top: 10px; }
+.resume-wrapper.tpl-elegant-serif .section-title { text-align: center; color: #d4af37; text-transform: uppercase; letter-spacing: 3px; font-size: 1rem; border: none; position: relative; margin-bottom: 30px; }
+.resume-wrapper.tpl-elegant-serif .section-title::before { content: '◈'; display: block; margin-bottom: 5px; font-size: 0.8rem; }
+.resume-wrapper.tpl-elegant-serif .skill-tag { border-bottom: 1px solid #4a2525; border-radius: 0; color: #4a2525; padding: 2px 0; margin-right: 15px; }
+
+/* --- GLOBAL TEMPLATE UTILITIES --- */
+.resume-wrapper .resume-contact span { font-size: 0.85rem; }
+.resume-wrapper .resume-section { margin-bottom: 35px; }
+.resume-wrapper .item-header { margin-bottom: 8px; display: flex; justify-content: space-between; align-items: baseline; }
+.resume-wrapper .item-title strong { font-size: 1.1rem; }
+.resume-wrapper .item-company { opacity: 0.8; font-style: italic; margin-left:10px; }
+.resume-wrapper .item-date { font-size: 0.85rem; opacity: 0.7; }
+.resume-wrapper .skill-tag { padding: 4px 12px; font-size: 0.85rem; margin-bottom: 5px; display: inline-block; }
+.resume-wrapper .item-desc { list-style-type: none; padding-left: 0; }
+.resume-wrapper .item-desc li { position: relative; padding-left: 15px; margin-bottom: 5px; }
+.resume-wrapper .item-desc li::before { content: "•"; position: absolute; left: 0; opacity: 0.5; }

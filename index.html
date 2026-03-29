@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Resume | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" style="z-index: 10;">
+            NEXT<span class="yellow-text">GEN</span>
+        </div>
+        <a href="auth.html" class="nav-cta" style="z-index: 10;">Signup/Login</a>
+    </nav>
+
+    <!-- Floating Lines Background effect per user request -->
+    <div style="width: 100vw; height: 100vh; position: fixed; z-index: 0; left: 0; top: 0; pointer-events: none;" id="floating-lines-container"></div>
+    <!-- Interactive layer to catch cursor for the Floatlines parallax without blocking clicks -->
+    <div style="position: absolute; inset: 0; z-index: 1; pointer-events: auto; opacity: 0;" id="floating-lines-interaction"></div>
+
+    <!-- Background Video Wrapper -->
+    <div class="video-background">
+        <div class="video-overlay"></div>
+        <!-- Primary Video -->
+        <video id="bg-video" autoplay loop muted playsinline>
+            <!-- We will inject the video source via JS or static URL here -->
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-man-working-on-his-laptop-308-large.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- Hero Section -->
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="stagger-reveal">
+                <span>CREATE</span>
+                <span class="yellow-text inline-block">IMPACT.</span>
+            </h1>
+            <p class="hero-subtitle stagger-reveal">
+                Stand out from the crowd with our advanced, animated resume templates. Built for modern professionals.
+            </p>
+            <div class="cta-group stagger-reveal">
+                <a href="auth.html" class="btn-primary-yellow">
+                    Start Building Free
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating UI Mockups to simulate "resume animations" -->
+        <div class="floating-mockups">
+            <div class="mockup mockup-1">
+                <div class="m-line short"></div>
+                <div class="m-line long"></div>
+                <div class="m-line mid"></div>
+            </div>
+            <div class="mockup mockup-2">
+                <div class="m-box"></div>
+                <div class="m-line long"></div>
+                <div class="m-line short"></div>
+            </div>
+            <div class="mockup mockup-3">
+                 <div class="m-circle"></div>
+                 <div class="m-line mid"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Trigger reveal animations on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.stagger-reveal');
+            reveals.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 200 + (index * 150));
+            });
+
+            // Initialize FloatingLines Effect
+            const container = document.getElementById('floating-lines-container');
+            const interactionLayer = document.getElementById('floating-lines-interaction');
+            
+            if (container && window.FloatingLines) {
+                const floatingLines = new window.FloatingLines(container, {
+                    linesGradient: ["#E945F5","#2F4BC0","#E945F5"],
+                    animationSpeed: 1,
+                    interactive: true,
+                    bendRadius: 5,
+                    bendStrength: -0.5,
+                    mouseDamping: 0.05,
+                    parallax: true,
+                    parallaxStrength: 0.2
+                });
+
+                // Re-route pointer events from the full screen interaction layer to the canvas container
+                // This allows the effect to get pointer events globally without the 1080px div blocking everything
+                if (interactionLayer) {
+                    interactionLayer.addEventListener('pointermove', (e) => floatingLines.handlePointerMove(e));
+                    interactionLayer.addEventListener('pointerleave', (e) => floatingLines.handlePointerLeave());
+                }
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="floating-lines.js"></script>
+</body>
+</html>
