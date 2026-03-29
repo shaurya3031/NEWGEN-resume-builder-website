@@ -137,6 +137,15 @@ body {
 .btn-small:active {
     transform: scale(0.96);
 }
+.btn-secondary {
+    background: #1f1f1f;
+    color: var(--text-primary);
+    border: 1px solid #333;
+}
+.mobile-only { display: none; }
+@media (max-width: 1024px) {
+    .mobile-only { display: inline-block; }
+}
 
 .app-main {
     display: flex;
@@ -364,11 +373,19 @@ body {
         box-shadow: 0 4px 24px rgba(0,0,0,0.5);
     }
     .preview-panel {
-        flex: 1;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 100;
+        background: #000;
+        display: none; /* Hidden by default on mobile */
         padding: 1rem;
     }
+    .preview-panel.active {
+        display: flex;
+    }
     .resume-wrapper {
-        transform: scale(0.75);
+        transform: scale(0.4) !important;
+        margin-top: -10cm;
     }
 }
 

@@ -282,9 +282,13 @@ document.addEventListener('DOMContentLoaded', () => {
         resumePreview.style.boxShadow = `${-rotateY * 2}px ${rotateX * 2 + 10}px 30px rgba(0,0,0,0.1)`;
     });
 
-    previewPanel.addEventListener('mouseleave', () => {
-        resumePreview.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-        resumePreview.style.boxShadow = 'var(--shadow-lg)';
-    });
+    // --- Mobile Preview Toggle ---
+    const btnTogglePreview = document.getElementById('btnTogglePreview');
+    if (btnTogglePreview) {
+        btnTogglePreview.addEventListener('click', () => {
+            previewPanel.classList.toggle('active');
+            btnTogglePreview.textContent = previewPanel.classList.contains('active') ? 'Back to Edit' : 'Show Preview';
+        });
+    }
 
 });

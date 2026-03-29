@@ -218,3 +218,18 @@
 .resume-wrapper .item-desc { list-style-type: none; padding-left: 0; }
 .resume-wrapper .item-desc li { position: relative; padding-left: 15px; margin-bottom: 5px; }
 .resume-wrapper .item-desc li::before { content: "•"; position: absolute; left: 0; opacity: 0.5; }
+
+/* --- ANIMATIONS --- */
+.resume-wrapper .resume-header { animation: fadeInUp 0.8s ease forwards; }
+.resume-wrapper .resume-section { opacity: 0; animation: fadeInUp 0.8s ease forwards; }
+.resume-wrapper .resume-section:nth-child(2) { animation-delay: 0.2s; }
+.resume-wrapper .resume-section:nth-child(3) { animation-delay: 0.4s; }
+.resume-wrapper .resume-section:nth-child(4) { animation-delay: 0.6s; }
+.resume-wrapper .resume-section:nth-child(5) { animation-delay: 0.8s; }
+
+.resume-wrapper .resume-item { opacity: 0; animation: fadeInUp 0.6s ease forwards; animation-delay: inherit; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
